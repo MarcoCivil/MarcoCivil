@@ -21,48 +21,17 @@
     </nav>
   </div>
 
-        <header class="header" >
-            {% block header %}
-            <div class="wrapper">
+  <section id="welcome" class="section">
+    <div class="row">
+      <div class="large-12 columns">
+        <img src="{{site.theme.link}}/images/header.png">
+      </div>
+    </div>
+  </section>
 
-                <h1 class="hdr-logo" role="banner">
-                    <a class="hdr-logo-link" href="/" title="Timber" rel="home">{{bloginfo('name')}}</a>
-                </h1>
-                <nav id="access" class="main-navigation" role="navigation">
-                    <ul>
-                    {% for item in menu.items %}
-                        <li id="menu-item-{{item.ID}}" class="menu-item menu-item-type-{{item.type}} menu-item-object-{{item.object}} menu-item-{{item.ID}}">
-                            <a href="{{item.link}}">{{item.title}}</a>
-                        </li>
-                    {% endfor %}
-                    </ul>
-                </nav><!-- #access -->
-
-            </div>
-            {% endblock %}
-        </header>
-
-
-        <section id="content" role="main" class="content-wrapper">
-            {% if title %}<h1>{{title}}</h1>{% endif %}
-            <div class="wrapper {{sidebar_class}}">
-                {% block content %}
-                    Sorry, no content
-                {% endblock %}
-            </div>
-            {% if sidebar %}
-                <aside class="layout-sidebar">
-                    {{sidebar}}
-                </aside>
-            {% endif %}
-        </section>
-
-        <footer id="footer">
-            {% include 'footer.twig' %}
-        </footer>
-        {{ function('wp_footer') }}
-        <script src="bower_components/jquery/dist/jquery.min.js"></script>
-        <script src="bower_components/foundation/js/foundation.min.js"></script>
-        <script src="js/app.js"></script>
-    </body>
+  {{ function('wp_footer') }}
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/foundation/js/foundation.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
 </html>
