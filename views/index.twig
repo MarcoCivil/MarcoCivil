@@ -24,4 +24,53 @@
     </div>
   </section>
 
+      <section id="supporters" class="section">
+      <div class="row">
+        <div class="large-7 columns">
+          <h3 class="white">Quem apoia</h2>
+            <ul class="slideshow" data-orbit>
+              {% for tweet in tweets %}
+              <li>
+                <div class="tweet">
+                  {{tweet.content}}
+                </div>
+                <div class="author">
+                  {{tweet.get_field('author')}}
+                </div>
+              </li>
+	      {% endfor %}
+            </ul>
+            <i class="fa fa-twitter stamp"></i>
+        </div>
+        <div class="large-5 columns live">
+          <div class="large-12 columns">
+            <h3 class="white right">Ao vivo</h3>
+          </div>
+          <div class="large-12 columns">
+            <ul>
+              <li>
+                <p class="tweet">Participe do tuitaço #VaiTerMarcoCivil »
+                  3ªfeira 11/03/2014 entre 12:00/14:00 pressão social pela
+                  aprovação do PL http://thndr.it/1kESruR</p> <p
+                  class="author">@lalgarra</p>
+              </li>
+              <li>
+                <p class="tweet">
+                  Participe do tuitaço #VaiTerMarcoCivil »
+                  3ªfeira 11/03/2014 entre 12:00/14:00 pressão social pela
+                  aprovação do PL http://thndr.it/1kESruR</p>
+                <p class="author">@lalgarra</p>
+              </li>
+              <li> <p class="tweet">Participe do tuitaço #VaiTerMarcoCivil »
+                3ªfeira 11/03/2014 entre 12:00/14:00 pressão social pela
+                aprovação do PL http://thndr.it/1kESruR</p>
+                <p class="author">@lalgarra</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
 {% endblock %}
