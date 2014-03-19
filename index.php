@@ -20,7 +20,7 @@
 	$context['posts'] = Timber::get_posts();
         $args = 'category_name=slideshow';
 	$context['slideshow'] = Timber::get_posts($args);
-        $tweet_args = 'category_name=tweet&&field=author';
+        $tweet_args = 'category_name=tweet';
 	$context['tweets'] = Timber::get_posts($tweet_args);
 	$context['foo'] = 'bar';
 	$templates = array('index.twig');
