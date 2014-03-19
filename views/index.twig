@@ -1,10 +1,27 @@
 {% extends "base.twig" %}
 
 {% block content %}
-	<h2>{{foo}}</h2>
-	<p>{{qux}}</p>
-	{% for post in posts %}
-		{% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
-	{% endfor %}
+  <section id="welcome" class="section">
+    <div class="row">
+      <div class="large-12 columns">
+        <img src="{{site.theme.link}}/images/header.png">
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="row">
+      <div class="large-12 columns">
+        <h2 class="red">O que é ?</h2>
+        <ul class="slideshow" data-orbit>
+          {% for slide in slideshow %}
+          <li>
+            {{slide.content}}
+          </li>
+	  {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </section>
 
 {% endblock %}
