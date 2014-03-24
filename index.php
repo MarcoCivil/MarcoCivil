@@ -22,6 +22,8 @@
 	$context['slideshow'] = Timber::get_posts($args);
         $tweet_args = 'category_name=tweet';
 	$context['tweets'] = Timber::get_posts($tweet_args);
+        $last_news_args = 'cat=-3,-4';
+	$context['last_news'] = Timber::get_posts($last_news_args);
 	$context['foo'] = 'bar';
 	$templates = array('index.twig');
 	if (is_home()){

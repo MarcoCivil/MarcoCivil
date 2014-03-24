@@ -73,4 +73,22 @@
       </div>
     </section>
 
+    <section id="news" class="section">
+      <div class="row">
+        <div class="large-12 columns">
+          <h2 class="red">O que ta acontecendo ?</h2>
+          <ul class="large-block-grid-4">
+            {% for news in last_news|slice(0,4) %}
+            <li>
+              <h4>{{news.title}}</h4>
+              <p>{{news.content|excerpt(30)}}</p>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </section>
+
+
+
 {% endblock %}
